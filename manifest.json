@@ -1,7 +1,7 @@
 {
-	"name": "Sample Theme",
+	"name": "tokyomelon",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md"
+	"author": "@paper-robotics",
+	"authorUrl": "https://github.com/paper-robotics"
 }
