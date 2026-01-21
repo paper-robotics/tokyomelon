@@ -151,12 +151,14 @@ svg * {
 .metadata-properties .metadata-input-longtext {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: var(--metadata-input-longtext-lines);
+  line-clamp: var(--metadata-input-longtext-lines);
 }
 .metadata-properties .metadata-input-longtext:not(:empty) {
   display: -webkit-box;
 }
 .metadata-properties .metadata-input-longtext:focus {
   -webkit-line-clamp: unset;
+  line-clamp: unset;
 }
 .metadata-properties-heading {
   display: inline-block;
@@ -272,7 +274,6 @@ input[type=checkbox].metadata-input-checkbox {
   align-items: center;
   padding: var(--size-4-1) 0;
   height: var(--input-height);
-  -webkit-user-select: none;
 }
 .metadata-property-icon:before {
   content: "\200B";
