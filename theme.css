@@ -1214,8 +1214,118 @@ body.is-phone .view-header-nav-buttons {
     position: relative;
 }
 
-/*---------------------------[  ]--------------------------*/
-/*---------------------------[  ]--------------------------*/
+/*---------------------------[ workspace "pale" ]--------------------------*/
+
+.workspace-leaf-content.is-read-mode .markdown-preview-view {
+    width: 100%;
+    inset-inline-start: 0;
+    background-color: var(--background-primary);
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer {
+    max-width: var(--file-line-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.markdown-rendered {
+    tab-size: var(--indent-size);
+}
+
+.markdown-rendered.rtl {
+    direction: rtl;
+}
+
+.markdown-rendered > :first-child {
+    margin-top: 0;
+}
+
+.markdown-rendered > :last-child {
+    margin-bottom: 0;
+}
+
+.markdown-rendered > .markdown-preview-section > .markdown-preview-pusher + div:not(.mod-ui) > :first-child, .markdown-rendered > .markdown-preview-section > .mod-ui + div:not(.mod-ui) > :first-child {
+    margin-top: 0;
+}
+
+.markdown-rendered > .markdown-preview-section > div:last-child > :last-child {
+    margin-bottom: 0;
+}
+
+/*---------------------------[ RIBBON ]--------------------------*/
+
+/* Ribbon */
+/* Add background to top left corner space above ribbon */
+.workspace-ribbon.mod-left {
+    margin-top: var(--header-height);
+    /* Add the tab background in the top left corner */
+}
+
+.workspace-ribbon.mod-left:before {
+    -webkit-app-region: drag;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--titlebar-background);
+    content: " ";
+    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+    height: var(--header-height);
+    width: var(--ribbon-width);
+    box-sizing: border-box;
+}
+
+body:not(.show-ribbon) {
+    --ribbon-width: 0px;
+}
+
+body:not(.show-ribbon) .workspace-ribbon, body:not(.show-ribbon) .side-dock-ribbon {
+    display: none;
+}
+
+.workspace-ribbon {
+    width: var(--ribbon-width);
+    flex: 0 0 var(--ribbon-width);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--ribbon-background);
+    z-index: var(--layer-sidedock);
+    color: var(--text-muted);
+    padding: var(--ribbon-padding);
+    gap: var(--size-4-1);
+    border-right: var(--divider-width) solid var(--divider-color);
+}
+
+.workspace-ribbon.mod-left.is-collapsed {
+    transition: background-color 250ms 95ms ease-in-out;
+    background-color: var(--ribbon-background-collapsed);
+    border-right-color: var(--divider-color);
+}
+
+.workspace-ribbon.mod-right {
+    display: none;
+}
+
+.workspace-ribbon.is-hidden {
+    display: none;
+}
+
+.workspace-ribbon.is-collapsed {
+    background-color: var(--background-secondary);
+}
+
+.side-dock-settings, .side-dock-actions {
+    flex-direction: column;
+}
+
+.side-dock-settings .side-dock-ribbon-action, .side-dock-actions .side-dock-ribbon-action {
+    margin: 0 auto;
+}
+
+.side-dock-settings {
+    margin-top: auto;
+}
+
 /*---------------------------[  ]--------------------------*/
 /*---------------------------[  ]--------------------------*/
 /*---------------------------[  ]--------------------------*/
